@@ -2,7 +2,7 @@
     <div class="view view-main">
 
         <div class="pages navbar-fixed">
-            <div data-page="category" class="page">
+            <div data-page="provinces" class="page">
 
                 <div class="navbar">
                     <div class="navbar-inner">
@@ -15,63 +15,16 @@
 
                     <div class="list-block">
                         <ul>
-
+                          {{#each this.Sul}}
                             <li>
-                                <a href="provincia.html" class="item-link item-content">
+                                <a href="provincia.html" class="item-link item-content" data-context-name='provinces.Sul.{{@index}}'>
                                     <div class="item-inner">
-                                        <div class="item-title">Benguela</div>
+                                        <div class="item-title">{{this.name}}</div>
                                     </div>
                                 </a>
                             </li>
 
-                            <li>
-                                <a href="provincia.html" class="item-link item-content">
-                                    <div class="item-inner">
-                                        <div class="item-title">Bié</div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="provincia.html" class="item-link item-content">
-                                    <div class="item-inner">
-                                        <div class="item-title">Cuando Cubango</div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="provincia.html" class="item-link item-content">
-                                    <div class="item-inner">
-                                        <div class="item-title">Cunene</div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="provincia.html" class="item-link item-content">
-                                    <div class="item-inner">
-                                        <div class="item-title">Huambo</div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="provincia.html" class="item-link item-content">
-                                    <div class="item-inner">
-                                        <div class="item-title">Huíla</div>
-                                    </div>
-                                </a>
-                            </li>
-
-                            <li>
-                                <a href="provincia.html" class="item-link item-content">
-                                    <div class="item-inner">
-                                        <div class="item-title">Namibe</div>
-                                    </div>
-                                </a>
-                            </li>
-
+                            {{/each}}
                         </ul>
                     </div>
 

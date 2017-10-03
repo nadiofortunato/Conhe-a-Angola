@@ -30,9 +30,12 @@ var myApp = new Framework7({
 
 
 
+
+
     // Enable Material theme
     material: true
 });
+
 
 
 // Expose Internal DOM library
@@ -44,6 +47,7 @@ $$('a').on('click', function (e) { //Close panel when you open a new page
 
 //  main view
 var mainView = myApp.addView('.view-main', {
+
 });
 
 // myApp.onPageInit('cart', function (page) {

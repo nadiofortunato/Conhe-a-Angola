@@ -12,8 +12,9 @@
 
                     <div class="navbar-inner">
 
-                          <div class="left"><a href="#" class="link icon-only back" ><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
+                          <div class="left"><a href="#" class="link icon-only back" data-ignore-cache="true" data-force="true"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
                         <div class="center">{{name}}</div>
+                        <div class="right"><a href="#" class="open-panel link icon-only"><i class="fa fa-bars" aria-hidden="true"></i></a></div>
 
                     </div>
                 </div>
@@ -26,30 +27,25 @@
                     <div class="content-block">
                       <!-- Buttons row as tabs controller -->
                       <div class="buttons-row">
-
+                          <a href="#tab0" class="tab-link active button">{{name}}</a>
                         <!-- Link to 1st tab, active -->
                         <a href="#tab1" class="tab-link button">Dicas</a>
 
                         <!-- Link to 2nd tab -->
-                        <a href="#tab2" class="tab-link button">Imagens</a>
+                        <a href="#tab2" class="tab-link button">Galeria</a>
                         <!-- Link to 3rd tab -->
-                        <a href="#tab3" class="tab-link button">Pontos Tur</a>
+                        <a href="#tab3" class="tab-link button">Pontos</a>
                       </div>
                     </div>
                     <!-- Tabs, tabs wrapper -->
                     <div class="tabs">
-                      {{#each galleries}}
+
                       <div id="tab0" class="tab active">
-                        <div class="card ks-card-header-pic">
-                          <a href="#" style="background-image:url('http://unitel.omdesignz.com/albums/{{cover}}');width: 100%;margin: 0 auto;" valign="bottom" class="card-header color-white no-border"></a>
-                        {{/each}}
-                        </div>
 
                         <div class="card">
+                          {{meta.introduction}}
                           <div class="card-content">
                             <div class="card-content-inner">
-                            <p>{{meta.introduction}}</p>
-
                               <div>
                               <h2>Clima</h2>
                               <p>{{meta.climate}}</p>
@@ -58,12 +54,12 @@
 
                               <div>
                               <h2>Cultura</h2>
-                              <p>{{meta.culture}}</p>
+                              {{meta.culture}}
                               </div>
 
                               <hr>
                               <div>
-                              <h2>Transporte</h2>
+                              <h2>Gastronomia</h2>
                               <p>{{meta.gastronomy}}</p>
                               </div>
 
@@ -77,7 +73,7 @@
                               <hr>
 
                               <div>
-                              <h2>Economia</h2>
+                              <h2>Língua</h2>
                               <p>{{meta.languages}}</p>
                               </div>
 
@@ -91,28 +87,26 @@
                       <!-- Tab 1, dicas by default -->
 
                       <div id="tab1" class="tab">
-                        {{#each facts}}
+
                         <div class="card">
-                          <div class="card-header"><h4 class="header">{{title}}</h4></div>
+                          <div class="card-header"><h4 class="header">Luanda é uma das províncias mais pequenas</h4></div>
                           <div class="card-content">
-
                             <div class="card ks-card-header-pic">
-
-                              <a href="#" style="background-image:url(img/did.jpg);width: 100%;margin: 0 auto;" valign="bottom" class="card-header color-white no-border"></a>
+                              <a href="#" style="background-image:url(img/luanda.jpg);width: 100%;margin: 0 auto;" valign="bottom" class="card-header color-white no-border"></a>
 
                             </div>
-
-
                             <div class="card-content-inner">
 
-                              <p>{{description}}</p>
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt architecto q
+                                uam quibusdam, nostrum saepe a, impedit qu
+                                asi omnis accusamus? Praesentium
+                                repellat, labore aut minus deleniti saepe expedita laborum distinctio fuga.
+                              </p>
 
                             </div>
-
                           </div>
 
                         </div>
-                          {{/each}}
 
 
 
@@ -124,7 +118,7 @@
                           {{#each galleries}}
                           {{#each photos}}
                            <div class="card demo-card-header-pic">
-                             <a href="#" data-context-name="provinces.Sul.{{@index}}.{{galleries}}"><div style="background-image:url('http://unitel.omdesignz.com/albums/{{image}}')" valign="bottom"
+                             <a href="galleryDetail.html" data-context-name="provinces.Sul.{{@index}}.{{galleries}}"><div style="background-image:url('http://unitel.omdesignz.com/albums/{{image}}')" valign="bottom"
                              class="card-header color-white no-border" id="card-header">
 
                              {{name}}
@@ -142,24 +136,43 @@
                       <div id="tab3" class="tab">
 
 
-                        {{#each attractions}}
-                        <div class="card">
-                          <div class="card-header"><h4>{{name}}</h4></div>
-                          <div class="card-content">
-                            <div class="card ks-card-header-pic">
-                        <a href="#" style="background-image:url('http://unitel.omdesignz.com/attractions/{{image}}');width: 100%;margin: 0 auto;" valign="bottom" class="card-header color-white no-border"></a>
 
+                          <div class="card">
+                            <div class="card-header"><h4>Restinga</h4></div>
+                            <div class="card-content">
+                              <div class="card ks-card-header-pic">
+                                <a href="#" style="background-image:url(img/benguela.jpg);width: 100%;margin: 0 auto;" valign="bottom" class="card-header color-white no-border"></a>
+
+                              </div>
+                              <div class="card-content-inner">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Dolor odit accusantium modi quae, expedita ipsum necessitatibus laudantium molestiae,
+                                 cum error nostrum eius pariatur.
+                                  veritatis placeat nesciunt maxime architecto, neque impedit.
+                                </p>
+
+                              </div>
                             </div>
-                            <div class="card-content-inner">
-                            <p>{{description}} </p>
 
-
-                            </div>
                           </div>
+                          <div class="card">
+                            <div class="card-header"><h4>Praia Morena</h4></div>
+                            <div class="card-content">
+                              <div class="card ks-card-header-pic">
+                                <a href="#" style="background-image:url(img/benguela.jpg);width: 100%;margin: 0 auto;" valign="bottom" class="card-header color-white no-border"></a>
 
-                        </div>
-                        {{/each}}
+                              </div>
+                              <div class="card-content-inner">
+                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Dolor odit accusantium modi quae, expedita ipsum necessitatibus laudantium molestiae,
+                                 cum error nostrum eius pariatur.
+                                  veritatis placeat nesciunt maxime architecto, neque impedit.
+                                </p>
 
+                              </div>
+                            </div>
+
+                          </div>
 
 
                       </div>

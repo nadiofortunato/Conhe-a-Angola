@@ -2,25 +2,40 @@
     <div class="view view-main">
 
         <div class="pages navbar-fixed">
-            <div data-page="provinces" class="page">
+            <div data-page="gallery" class="page">
 
                 <div class="navbar">
                     <div class="navbar-inner">
-                          <div class="left"><a href="index.html" class="link icon-only"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>                        <div class="center">{{name}}</div>
+                            <div class="left"><a href="#" class="link icon-only back"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
+                        <div class="center">{{name}}</div>
+                        <div class="center"></div>
                     </div>
                 </div>
 
                 <div class="page-content home">
-                {{#each galleries}}
+
+
+               {{#each galleries}}
+
                 <div class="card demo-card-header-pic">
-                  <a href="pontoDetail.html"><div style="background-image:url('http://unitel.omdesignz.com/albums/{{cover}}')" valign="bottom"
+                  <a href="galleryDetail.html" data-context-name="provinces.Sul.{{@index}}.{{galleries}}"><div style="background-image:url('http://unitel.omdesignz.com/albums/{{cover}}')" valign="bottom"
                   class="card-header color-white no-border" id="card-header">
+
                   {{name}}
+
+
+
                 </div></a>
+
+
+
+
                   <div class="card-content">
                   </div>
                 </div>
                 {{/each}}
+
+
 
 
 

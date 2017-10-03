@@ -2,36 +2,30 @@
     <div class="view view-main">
 
         <div class="pages navbar-fixed">
-            <div data-page="category" class="page">
+            <div data-page="provinces" class="page">
 
                 <div class="navbar">
                     <div class="navbar-inner">
                         <div class="left"><a href="#" class="link icon-only back"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></div>
-                        <div class="center">Categoria</div>
+                        <div class="center">Angola-Norte</div>
                     </div>
                 </div>
+
 
                 <div class="page-content">
 
                     <div class="list-block">
                         <ul>
-
+                          {{#each this.Norte}}
                             <li>
-                                <a href="technology.html" class="item-link item-content">
+                                <a href="provinciaNorte.html" class="item-link item-content" data-context-name="provinces.Norte.{{@index}}">
                                     <div class="item-inner">
-                                        <div class="item-title" id="provinces"></div>
+                                        <div class="item-title">{{this.name}}</div>
                                     </div>
                                 </a>
                             </li>
 
-
-
-                        
-
-
-
-
-
+                            {{/each}}
                         </ul>
                     </div>
 
